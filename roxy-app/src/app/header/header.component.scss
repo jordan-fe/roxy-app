@@ -1,0 +1,32 @@
+.background-menu {
+  background-color: rgb(21, 129, 173);
+}
+
+.nav-link {
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.active-link {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 1024px) {
+  #mobile-menu {
+    background-color: rgb(21, 129, 173);
+    border-radius: 0 0 8px 8px;
+    border-top: 1px solid white;
+    padding-bottom: 2rem;
+  }
+}

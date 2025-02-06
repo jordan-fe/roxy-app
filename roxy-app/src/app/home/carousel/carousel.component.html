@@ -1,0 +1,20 @@
+<div class="carousel">
+  <!-- Bouton précédent -->
+  <button class="carousel-control prev" (click)="prev()">
+    &lt;
+  </button>
+
+  <!-- Image affichée -->
+  <div class="carousel-images">
+    <img
+      [src]="images[currentIndex]"
+      alt="Image {{ currentIndex + 1 }}"
+      class="carousel-image"
+    />
+  </div>
+
+  <!-- Bouton suivant -->
+  <button class="carousel-control next" (click)="next()">
+    &gt;
+  </button>
+</div>

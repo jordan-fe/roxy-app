@@ -1,0 +1,62 @@
+<nav class="fixed top-0 left-0 w-full z-50 shadow-lg">
+  <div class="background-menu mx-auto px-4">
+    <div class="flex flex-col lg:flex-row justify-between items-center">
+      <!-- Logo Section -->
+      <div class="flex items-center w-full lg:w-auto justify-between">
+        <div class="flex items-center">
+          <img class="w-24 self-end h-24 lg:w-[150px] lg:h-[160px] z-10 m-0 lg:mt-4 lg:mb-[-10px] mb-[-6px]"
+               src="./assets/roxy-no-word.png"
+               alt="Logo Roxy">
+          <img class="hidden lg:block ml-2 max-h-[150px]"
+               src="./assets/roxy-toiletage-white.png"
+               alt="Roxy Toilettage">
+        </div>
+        <div class="block lg:hidden">
+          <app-phone-button></app-phone-button>
+        </div>
+
+        <!-- Menu Burger pour Mobile -->
+        <button class="lg:hidden text-white p-2" (click)="toggleMenu()">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="hidden lg:block">
+        <app-phone-button></app-phone-button>
+      </div>
+
+      <!-- Navigation Links -->
+      <div id="mobile-menu" class="hidden lg:flex w-full lg:w-auto p-0">
+        <div class="flex flex-col lg:flex-row lg:space-x-8 space-y-2 lg:space-y-0 w-full lg:w-auto">
+          <a routerLink="/"
+             routerLinkActive="active-link"
+             [routerLinkActiveOptions]="{exact: true}"
+             (click)="toggleMenu()"
+             class="nav-link">
+            Accueil
+          </a>
+          <a routerLink="/galerie"
+             (click)="toggleMenu()"
+             routerLinkActive="active-link"
+             class="nav-link">
+            Galerie
+          </a>
+          <a routerLink="/tarif"
+             routerLinkActive="active-link"
+             (click)="toggleMenu()"
+             class="nav-link">
+            Tarifs
+          </a>
+          <a routerLink="/contact"
+             routerLinkActive="active-link"
+             (click)="toggleMenu()"
+             class="nav-link">
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
