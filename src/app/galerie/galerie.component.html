@@ -1,0 +1,23 @@
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
+  <div *ngFor="let image of images" class="group relative">
+    <img
+      [src]="basePath + image"
+      alt="Image de la galerie"
+      class="galerie-img w-full h-auto rounded-lg shadow-md cursor-pointer transition duration-300 ease-in-out transform group-hover:scale-105"
+      (click)="openFullScreen(image)"
+    >
+  </div>
+</div>
+
+<!-- Modal pour afficher l'image en plein écran -->
+<div
+  class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+  *ngIf="selectedImage"
+  (click)="closeFullScreen()"
+>
+  <img
+    [src]="basePath + selectedImage"
+    alt="Image en plein écran"
+    class="max-w-full max-h-full rounded-lg shadow-lg cursor-pointer"
+  >
+</div>

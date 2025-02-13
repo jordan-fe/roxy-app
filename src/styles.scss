@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  background-image: url('assets/background-img.png');
+  background-repeat: no-repeat;
+  background-size: cover; /* Ajuste l'image pour couvrir tout l'écran */
+  background-attachment: fixed; /* Garde l'image fixe lors du défilement */
+  background-position: center; /* Centrer l'image */
+
+
+  padding-top: 166px;
+
+  @media (max-width: 1024px) {
+    padding-top: 80px;
+  }
+}
