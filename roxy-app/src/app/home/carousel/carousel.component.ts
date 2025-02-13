@@ -14,7 +14,6 @@ export class CarouselComponent {
   images = [
     'assets/carousel/image1.jpg',
     'assets/carousel/image2.jpg',
-    'assets/carousel/image3.jpg',
   ];
 
   // Méthode pour aller à l'image suivante

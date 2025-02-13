@@ -6,6 +6,8 @@ import emailjs from "emailjs-com";
 })
 export class MailService {
 
+  readonly toMail = "roxytoilettage@outlook.be";
+
   constructor() { }
 
   sendMailToContactBox(clientMail: string, clientName: string, mailContent: string, clientPhone: string) {
@@ -14,7 +16,7 @@ export class MailService {
       'service_hl3pknn',
       'template_ruz6qm1',
       {
-        to_mail: 'contact.roxy.toilettage@gmail.com',
+        to_mail: this.toMail,
         to_name: 'Roxy app',
         from_name: clientName + '<' + clientMail + '>' + ' <' + clientPhone + '>',
         message: mailContent

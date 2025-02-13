@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {RouterModule} from "@angular/router";
+import {Component, inject} from '@angular/core';
+import {Router, RouterModule} from "@angular/router";
 import {PhoneButtonComponent} from './phone-button/phone-button.component';
 
 @Component({
@@ -11,6 +11,7 @@ import {PhoneButtonComponent} from './phone-button/phone-button.component';
 })
 export class HeaderComponent {
 
+  router = inject(Router);
   navMenuConfig: {
     label: string,
     link: string
@@ -35,4 +36,7 @@ export class HeaderComponent {
     }
   }
 
+  goToHome() {
+    this.router.navigateByUrl("/");
+  }
 }

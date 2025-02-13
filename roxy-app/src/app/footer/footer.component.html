@@ -7,13 +7,12 @@
         <h3 class="text-lg font-semibold mb-3">Horaires d'ouverture</h3>
         <table class="w-full text-sm">
           <tbody>
-          <tr><td class="pr-4">Lundi</td><td>09h00 - 12h00 | 14h00 - 18h00</td></tr>
-          <tr><td class="pr-4">Mardi</td><td>09h00 - 12h00 | 14h00 - 18h00</td></tr>
-          <tr><td class="pr-4">Mercredi</td><td>09h00 - 12h00 | 14h00 - 18h00</td></tr>
-          <tr><td class="pr-4">Jeudi</td><td>09h00 - 12h00 | 14h00 - 18h00</td></tr>
-          <tr><td class="pr-4">Vendredi</td><td>09h00 - 12h00 | 14h00 - 18h00</td></tr>
-          <tr><td class="pr-4">Samedi</td><td>09h00 - 12h00</td></tr>
-          <tr><td class="pr-4">Dimanche</td><td class="text-red-400">Fermé</td></tr>
+            @for (entry of horaires;track entry.jourLabel) {
+              <tr>
+                <td class="pr-4">{{entry.jourLabel}}</td>
+                <td class="{{entry.heure ? '' : 'text-red-400'}}">{{entry.heure ? entry.heure : 'Fermé'}}</td>
+              </tr>
+            }
           </tbody>
         </table>
       </div>
