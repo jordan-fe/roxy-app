@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TarifComponent } from './tarif.component';
+import { PeigneIconComponent } from './peigne-icon.component';
 
-describe('TarifComponent', () => {
-  let component: TarifComponent;
-  let fixture: ComponentFixture<TarifComponent>;
+describe('PeigneIconComponent', () => {
+  let component: PeigneIconComponent;
+  let fixture: ComponentFixture<PeigneIconComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TarifComponent]
+      imports: [PeigneIconComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TarifComponent);
+    fixture = TestBed.createComponent(PeigneIconComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

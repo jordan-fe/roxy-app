@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-
+  readonly facebook = "https://www.facebook.com/people/Roxy-Toilettage/61571036911063/";
+  readonly instagram = "https://www.instagram.com/roxytoilettage?igsh=MTh0aDh2OHF5cXY2aA=="
 }

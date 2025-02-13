@@ -11,6 +11,23 @@ import {PhoneButtonComponent} from './phone-button/phone-button.component';
 })
 export class HeaderComponent {
 
+  navMenuConfig: {
+    label: string,
+    link: string
+  }[] = [{
+    label: "Accueil",
+    link: "/"
+  }, {
+    label: "Galerie",
+    link: "/galerie"
+  },{
+    label: "Services",
+    link: "/mes-services"
+  }, {
+    label: "Contact",
+    link: "/contact"
+  }]
+
   toggleMenu() {
     const menu = document.getElementById('mobile-menu');
     if (menu) {

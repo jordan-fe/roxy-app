@@ -30,31 +30,15 @@
       <!-- Navigation Links -->
       <div id="mobile-menu" class="hidden lg:flex w-full lg:w-auto p-0">
         <div class="flex flex-col lg:flex-row lg:space-x-8 space-y-2 lg:space-y-0 w-full lg:w-auto">
-          <a routerLink="/"
-             routerLinkActive="active-link"
-             [routerLinkActiveOptions]="{exact: true}"
-             (click)="toggleMenu()"
-             class="nav-link">
-            Accueil
-          </a>
-          <a routerLink="/galerie"
-             (click)="toggleMenu()"
-             routerLinkActive="active-link"
-             class="nav-link">
-            Galerie
-          </a>
-          <a routerLink="/tarif"
-             routerLinkActive="active-link"
-             (click)="toggleMenu()"
-             class="nav-link">
-            Tarifs
-          </a>
-          <a routerLink="/contact"
-             routerLinkActive="active-link"
-             (click)="toggleMenu()"
-             class="nav-link">
-            Contact
-          </a>
+          @for (entry of navMenuConfig;track entry.label) {
+            <a [routerLink]="entry.link"
+               routerLinkActive="active-link"
+               [routerLinkActiveOptions]="{exact: true}"
+               (click)="toggleMenu()"
+               class="nav-link">
+              {{entry.label}}
+            </a>
+          }
         </div>
       </div>
     </div>
