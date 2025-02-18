@@ -6,18 +6,26 @@ import {ScissorsIconComponent} from './scissors-icon/scissors-icon.component';
 import {NailTrimmerIconComponent} from './nail-trimmer-icon/nail-trimmer-icon.component';
 import {HairClipperIconComponent} from './hair-clipper-icon/hair-clipper-icon.component';
 import {CotonSwabsIconComponent} from './coton-swabs-icon/coton-swabs-icon.component';
+import {RazorIconComponent} from "./razor-icon/razor-icon.component";
+import {ScissorsSimpleIconComponent} from "./scissors-simple-icon/scissors-simple-icon.component";
+import {EpilatorIconComponent} from "./epilator-icon/epilator-icon.component";
+import {PoodleIconComponent} from "./poodle-icon/poodle-icon.component";
 
 @Component({
   selector: 'app-my-services',
-  imports: [
-    PeigneIconComponent,
-    BathIconComponent,
-    HairSprayIconComponent,
-    ScissorsIconComponent,
-    NailTrimmerIconComponent,
-    HairClipperIconComponent,
-    CotonSwabsIconComponent
-  ],
+    imports: [
+        PeigneIconComponent,
+        BathIconComponent,
+        HairSprayIconComponent,
+        ScissorsIconComponent,
+        NailTrimmerIconComponent,
+        HairClipperIconComponent,
+        CotonSwabsIconComponent,
+        RazorIconComponent,
+        ScissorsSimpleIconComponent,
+        EpilatorIconComponent,
+        PoodleIconComponent
+    ],
   templateUrl: './my-services.component.html',
   standalone: true,
   styleUrl: './my-services.component.scss'
