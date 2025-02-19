@@ -50,7 +50,7 @@ export class ContactComponent implements OnInit, OnDestroy {
   }
 
   onSubmit() {
-    if (this.contactForm.invalid || !this.recaptchaToken) {
+    if (this.contactForm.invalid || !this.isRecaptcha()) {
       alert("recaptcha invalid");
     } else {
       this.mailService.sendMailToContactBox(
