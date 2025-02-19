@@ -10,6 +10,7 @@ import {RazorIconComponent} from "./razor-icon/razor-icon.component";
 import {ScissorsSimpleIconComponent} from "./scissors-simple-icon/scissors-simple-icon.component";
 import {EpilatorIconComponent} from "./epilator-icon/epilator-icon.component";
 import {PoodleIconComponent} from "./poodle-icon/poodle-icon.component";
+import {TweezersIconComponent} from "./tweezers-icon/tweezers-icon.component";
 
 @Component({
   selector: 'app-my-services',
@@ -24,7 +25,8 @@ import {PoodleIconComponent} from "./poodle-icon/poodle-icon.component";
         RazorIconComponent,
         ScissorsSimpleIconComponent,
         EpilatorIconComponent,
-        PoodleIconComponent
+        PoodleIconComponent,
+        TweezersIconComponent
     ],
   templateUrl: './my-services.component.html',
   standalone: true,
