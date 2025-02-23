@@ -14,7 +14,7 @@ export class MailService {
     //contact.roxy.toilettage@gmail.com
     emailjs.send(
       'service_hl3pknn',
-      'template_ruz6qm1',
+      'template_2q25idg',
       {
         to_mail: this.toMail,
         to_name: 'Roxy app',
