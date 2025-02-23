@@ -8,7 +8,6 @@ import {HairClipperIconComponent} from './hair-clipper-icon/hair-clipper-icon.co
 import {CotonSwabsIconComponent} from './coton-swabs-icon/coton-swabs-icon.component';
 import {RazorIconComponent} from "./razor-icon/razor-icon.component";
 import {ScissorsSimpleIconComponent} from "./scissors-simple-icon/scissors-simple-icon.component";
-import {EpilatorIconComponent} from "./epilator-icon/epilator-icon.component";
 import {PoodleIconComponent} from "./poodle-icon/poodle-icon.component";
 import {TweezersIconComponent} from "./tweezers-icon/tweezers-icon.component";
 
@@ -24,7 +23,6 @@ import {TweezersIconComponent} from "./tweezers-icon/tweezers-icon.component";
         CotonSwabsIconComponent,
         RazorIconComponent,
         ScissorsSimpleIconComponent,
-        EpilatorIconComponent,
         PoodleIconComponent,
         TweezersIconComponent
     ],
