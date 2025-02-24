@@ -1,5 +1,5 @@
-import {Component, inject} from '@angular/core';
-import {Router, RouterModule} from "@angular/router";
+import {Component, inject, OnInit} from '@angular/core';
+import {NavigationEnd, Router, RouterModule} from "@angular/router";
 import {PhoneButtonComponent} from './phone-button/phone-button.component';
 
 @Component({
@@ -9,7 +9,7 @@ import {PhoneButtonComponent} from './phone-button/phone-button.component';
   standalone: true,
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
   router = inject(Router);
   navMenuConfig: {
@@ -28,6 +28,23 @@ export class HeaderComponent {
     label: "Contact",
     link: "/contact"
   }]
+
+  ngOnInit() {
+    this.router.events.subscribe((event: any) => {
+      if (event instanceof NavigationEnd) {
+        this.closeMenu();
+      }
+    })
+  }
+
+  closeMenu() {
+    const menu = document.getElementById('mobile-menu');
+    if (menu) {
+      if (!menu.classList.contains('hidden')) {
+        menu.classList.add('hidden');
+      }
+    }
+  }
 
   toggleMenu() {
     const menu = document.getElementById('mobile-menu');
