@@ -18,9 +18,10 @@ export class GalerieComponent implements OnInit {
   selectedImage: string | null = null; // Image actuellement en plein écran
 
   ngOnInit(): void {
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= 21; i++) {
       this.images.push('galerie-' + i + '.jpg');
     }
+    this.images.reverse();
   }
 
   // Ouvrir l'image en plein écran
